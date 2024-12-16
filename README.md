@@ -96,6 +96,57 @@ npm run dev
 ```
 前端将在 http://localhost:5173 运行
 
+## 运行项目
+
+### 数据库设置
+
+1. 初始化数据库：
+```bash
+flask db upgrade
+```
+
+2. 创建管理员用户：
+```bash
+python3 create_admin.py
+```
+
+这将创建以下用户：
+- 管理员账号：admin@example.com (密码: admin123)
+- 测试用户账号：test@example.com (密码: test123)
+
+### 后端服务器
+
+1. 安装依赖：
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+2. 运行后端服务器：
+```bash
+python3 run.py
+```
+
+服务器将在 http://localhost:5002 上运行。
+
+### 前端应用
+
+1. 进入前端目录：
+```bash
+cd frontend/job-admin
+```
+
+2. 安装依赖：
+```bash
+npm install
+```
+
+3. 运行开发服务器：
+```bash
+npm run dev
+```
+
+前端应用将在 http://localhost:5173 上运行。
+
 ## 测试
 
 运行测试套件：
